@@ -10,27 +10,29 @@
   <body>
     <div class="app-container">
       <div class="servers-sidebar scrollbar-hidden">
-        <a data-server href="#" class="server active">
+        <a data-active-toggle="server" href="#" class="server active">
           <img src="./imgs/servers/hiking-lovers.jpg" alt="Hiking Lovers" />
         </a>
         <a
           href="#"
-          data-server
+          data-active-toggle="server"
           class="server with-new-messages"
           data-notifications-count="11"
         >
           TCN
         </a>
         <a
-          data-server
+          data-active-toggle="server"
           href="#"
           class="server with-new-messages"
           data-notifications-count="2"
         >
           <img src="./imgs/servers/gym-rats.jpg" alt="Gym Rats" />
         </a>
-        <a href="#" data-server class="server with-new-messages">TSAD</a>
-        <a href="#" data-server class="server">TNS</a>
+        <a href="#" data-active-toggle="server" class="server with-new-messages"
+          >TSAD</a
+        >
+        <a href="#" data-active-toggle="server" class="server">TNS</a>
       </div>
       <button class="channels-sidebar-header outline-inset">
         Hiking Lovers
@@ -38,15 +40,15 @@
       </button>
       <div class="channels-sidebar scrollbar-vanishing">
         <div class="channel-group">
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             general
           </a>
-          <a href="#" data-channel class="channel muted">
+          <a href="#" data-active-toggle="channel" class="channel muted">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             introductions
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             new-members
           </a>
@@ -56,27 +58,27 @@
             <svg class="chevron"><use href="#svg-chevron"></use></svg>
             Hiking Trips
           </button>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             north-america
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             europe
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             africa
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             asia
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             south-america
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             australia
           </a>
@@ -86,15 +88,15 @@
             <svg class="chevron"><use href="#svg-chevron"></use></svg>
             other
           </button>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             hiking-advice
           </a>
-          <a href="#" data-channel class="channel">
+          <a href="#" data-active-toggle="channel" class="channel">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             hiking-gear
           </a>
-          <a href="#" data-channel class="channel active">
+          <a href="#" data-active-toggle="channel" class="channel active">
             <svg class="hash"><use href="#svg-hash"></use></svg>
             trail-ratings
           </a>
@@ -106,16 +108,20 @@
           trail-ratings
         </div>
         <div class="icons">
-          <button data-chat-header-icon class="icon">
+          <button data-active-toggle="chat-header-icon" class="icon">
             <svg><use href="#svg-thread"></use></svg>
           </button>
-          <button data-chat-header-icon class="icon">
+          <button data-active-toggle="chat-header-icon" class="icon">
             <svg><use href="#svg-notification-bell"></use></svg>
           </button>
-          <button data-chat-header-icon class="icon">
+          <button data-active-toggle="chat-header-icon" class="icon">
             <svg><use href="#svg-pin"></use></svg>
           </button>
-          <button data-chat-header-icon data-users-sidebar-toggle class="icon">
+          <button
+            data-active-toggle="chat-header-icon"
+            data-users-sidebar-toggle
+            class="icon"
+          >
             <svg><use href="#svg-users"></use></svg>
           </button>
           <div class="search-input-wrapper">
@@ -125,10 +131,10 @@
             </button>
             <svg class="search-icon"><use href="#svg-search"></use></svg>
           </div>
-          <button data-chat-header-icon class="icon">
+          <button data-active-toggle="chat-header-icon" class="icon">
             <svg><use href="#svg-inbox"></use></svg>
           </button>
-          <button data-chat-header-icon class="icon">
+          <button data-active-toggle="chat-header-icon" class="icon">
             <svg><use href="#svg-help"></use></svg>
           </button>
         </div>
@@ -138,16 +144,28 @@
         <div class="message-group">
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -165,16 +183,28 @@
           </div>
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -183,16 +213,28 @@
           </div>
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -203,16 +245,28 @@
         <div class="message-group">
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -232,16 +286,28 @@
         <div class="message-group">
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -256,16 +322,28 @@
           </div>
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -276,16 +354,28 @@
         <div class="message-group">
           <div class="message-row">
             <div class="message-popover-actions">
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-emoji"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-edit"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-forward"></use></svg>
               </button>
-              <button class="action-icon" data-message-popover-action>
+              <button
+                class="action-icon"
+                data-active-toggle="message-popover-action"
+              >
                 <svg><use href="#svg-more"></use></svg>
               </button>
             </div>
@@ -304,20 +394,35 @@
             class="message-input"
             placeholder="Message #general"
           ></textarea>
-          <button class="message-input-icon" data-message-input-action>
+          <button
+            class="message-input-icon"
+            data-active-toggle="message-input-icon"
+          >
             <svg><use href="#svg-plus"></use></svg>
           </button>
           <div class="message-input-actions">
-            <button class="message-input-icon" data-message-input-action>
+            <button
+              class="message-input-icon"
+              data-active-toggle="message-input-icon"
+            >
               <svg><use href="#svg-present"></use></svg>
             </button>
-            <button class="message-input-icon" data-message-input-action>
+            <button
+              class="message-input-icon"
+              data-active-toggle="message-input-icon"
+            >
               <svg><use href="#svg-gif"></use></svg>
             </button>
-            <button class="message-input-icon" data-message-input-action>
+            <button
+              class="message-input-icon"
+              data-active-toggle="message-input-icon"
+            >
               <svg><use href="#svg-sticker"></use></svg>
             </button>
-            <button class="message-input-icon" data-message-input-action>
+            <button
+              class="message-input-icon"
+              data-active-toggle="message-input-icon"
+            >
               <svg><use href="#svg-emoji"></use></svg>
             </button>
           </div>
@@ -326,7 +431,11 @@
       <div class="chat-sidebar scrollbar-vanishing" data-users-sidebar>
         <div class="user-list-group">
           <div class="user-list-group-title">Online &ndash; 4</div>
-          <button class="user-list-row" data-status="active">
+          <button
+            class="user-list-row"
+            data-status="active"
+            data-active-toggle="user-list-item"
+          >
             <div class="user-img-wrapper">
               <img
                 class="user-img"
@@ -336,7 +445,11 @@
             </div>
             <div>Camilla Hobart</div>
           </button>
-          <button class="user-list-row" data-status="active">
+          <button
+            class="user-list-row"
+            data-status="active"
+            data-active-toggle="user-list-item"
+          >
             <div class="user-img-wrapper">
               <img
                 class="user-img"
@@ -346,7 +459,11 @@
             </div>
             <div>Daniel Sutten</div>
           </button>
-          <button class="user-list-row" data-status="inactive">
+          <button
+            class="user-list-row"
+            data-status="inactive"
+            data-active-toggle="user-list-item"
+          >
             <div class="user-img-wrapper">
               <img
                 class="user-img"
@@ -356,7 +473,11 @@
             </div>
             <div>Loria Gisch</div>
           </button>
-          <button class="user-list-row" data-status="busy">
+          <button
+            class="user-list-row"
+            data-status="busy"
+            data-active-toggle="user-list-item"
+          >
             <div class="user-img-wrapper">
               <img
                 class="user-img"
@@ -369,7 +490,10 @@
         </div>
         <div class="user-list-group">
           <div class="user-list-group-title">Offline &ndash; 2</div>
-          <button class="user-list-row offline">
+          <button
+            class="user-list-row offline"
+            data-active-toggle="user-list-item"
+          >
             <img
               class="user-img"
               src="./imgs/avatars/martin-imbesi.jpg"
@@ -377,7 +501,10 @@
             />
             <div>Martin Imbesi</div>
           </button>
-          <button class="user-list-row offline">
+          <button
+            class="user-list-row offline"
+            data-active-toggle="user-list-item"
+          >
             <img
               class="user-img"
               src="./imgs/avatars/roselyn-beile.jpg"
