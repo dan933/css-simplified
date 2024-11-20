@@ -113,9 +113,6 @@ body {
   background: hsl(195, 53%, 89%);
 }
 
-/* New Code: */
-
-/* TODO: Wrap the cards in .card-container */
 .card-container {
   container: house-card / inline-size;
 }
@@ -127,13 +124,13 @@ body {
   }
 }
 
-@media (width < 650px) {
+@media (width <= 650px) {
   .main {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width < 400px) {
+@media (width <= 400px) {
   .header-nav {
     flex-direction: column;
     gap: 0;
