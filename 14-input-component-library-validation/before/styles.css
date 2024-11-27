@@ -5,6 +5,10 @@ input {
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   .input {
     --focus-color: #0af;
     --border-color: #aaa;
