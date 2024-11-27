@@ -1,0 +1,68 @@
+@layer base, theme;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  .btn {
+    --hue: 0;
+    --saturation: 0%;
+    --lightness: 90%;
+
+    background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+    border: 1px solid
+      hsl(var(--hue), var(--saturation), calc(var(--lightness) - 20%));
+    outline: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    color: var(--text-color, initial);
+
+    &:hover,
+    &:focus-visible {
+      background-color: hsl(
+        var(--hue),
+        var(--saturation),
+        calc(var(--lightness) - 10%)
+      );
+      box-shadow: 0 0 5px 0
+        hsl(var(--hue), var(--saturation), calc(var(--lightness) - 20%));
+    }
+
+    &.btn-large {
+      font-size: 1.25rem;
+    }
+
+    &.btn-small {
+      font-size: 0.75rem;
+    }
+
+    &.btn-pill {
+      border-radius: 1000000px;
+    }
+  }
+}
+
+@layer theme {
+  .btn-primary {
+    --hue: 271;
+    --saturation: 70%;
+    --lightness: 50%;
+    --text-color: white;
+  }
+
+  .btn-accent {
+    --hue: 200;
+    --saturation: 100%;
+    --lightness: 40%;
+    --text-color: white;
+  }
+
+  .btn-danger {
+    --hue: 0;
+    --saturation: 60%;
+    --lightness: 50%;
+    --text-color: white;
+  }
+}

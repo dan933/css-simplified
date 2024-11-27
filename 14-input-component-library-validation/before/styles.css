@@ -1,0 +1,47 @@
+@layer base, theme;
+
+input {
+  margin: 0.25rem;
+}
+
+@layer base {
+  .input {
+    --focus-color: #0af;
+    --border-color: #aaa;
+
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-size: inherit;
+    padding: 0.5em;
+    border-radius: 0.2em;
+
+    &:focus-visible {
+      border-color: var(--focus-color);
+      box-shadow: 0 0 5px 0 var(--focus-color);
+    }
+
+    &.input-large {
+      font-size: 1.25rem;
+    }
+
+    &.input-small {
+      font-size: 0.75rem;
+    }
+
+    &:disabled {
+      background-color: #eaeaea;
+    }
+  }
+}
+
+@layer theme {
+  .input-success {
+    --border-color: #27ae60;
+    --focus-color: #0f0;
+  }
+
+  .input-error {
+    --border-color: #eb5757;
+    --focus-color: #f00;
+  }
+}

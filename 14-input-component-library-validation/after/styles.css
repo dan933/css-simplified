@@ -1,0 +1,108 @@
+@layer base, validation;
+
+.input-group {
+  margin: 0.25rem;
+}
+
+:root {
+  --success-color: #27ae60;
+  --success-focus-color: #0f0;
+  --error-color: #eb5757;
+  --error-focus-color: #f00;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .input {
+    --focus-color: #0af;
+    --border-color: #aaa;
+
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-size: inherit;
+    padding: 0.5em;
+    border-radius: 0.2em;
+
+    &:focus-visible {
+      border-color: var(--focus-color);
+      box-shadow: 0 0 5px 0 var(--focus-color);
+    }
+
+    &.input-large {
+      font-size: 1.25rem;
+    }
+
+    &.input-small {
+      font-size: 0.75rem;
+    }
+
+    &:disabled {
+      background-color: #eaeaea;
+    }
+  }
+}
+
+@layer validation {
+  .input-group {
+    --check-size: 1.75rem;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: fit-content;
+
+    &:has(.input:user-valid),
+    &:has(.input:user-invalid) {
+      &::after {
+        position: absolute;
+        padding: 0.25rem;
+        width: var(--check-size);
+        display: block;
+      }
+
+      .input {
+        padding-inline-end: var(--check-size);
+      }
+    }
+
+    &:has(.input:user-valid) {
+      &::after {
+        content: "✔";
+        text-align: center;
+        color: var(--success-color);
+      }
+
+      &:has(.input:focus-visible)::after {
+        color: var(--success-focus-color);
+      }
+    }
+
+    &:has(.input:user-invalid) {
+      &::after {
+        content: "\2716";
+        text-align: center;
+        color: var(--error-color);
+      }
+
+      &:has(.input:focus-visible)::after {
+        color: var(--error-focus-color);
+      }
+    }
+  }
+
+  .input:user-valid {
+    --border-color: var(--success-color);
+    --focus-color: var(--success-focus-color);
+  }
+
+  .input:user-invalid {
+    --border-color: var(--error-color);
+    --focus-color: var(--error-focus-color);
+  }
+}
