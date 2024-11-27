@@ -3,7 +3,7 @@
 }
 
 .btn {
-  background-color: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 90%);
   border: 1px solid hsl(0, 0%, 70%);
   outline: none;
   cursor: pointer;
@@ -62,5 +62,5 @@
 }
 
 .btn.btn-pill {
-  border-radius: 1000000px;
+  border-radius: 999999px;
 }

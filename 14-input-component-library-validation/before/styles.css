@@ -1,19 +1,15 @@
 @layer base, theme;
 
-input {
-  margin: 0.25rem;
-}
-
 @layer base {
   * {
     box-sizing: border-box;
   }
 
   .input {
+    --default-border-color: #aaa;
     --focus-color: #0af;
-    --border-color: #aaa;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--default-border-color);
     outline: none;
     font-size: inherit;
     padding: 0.5em;
@@ -24,28 +20,29 @@ input {
       box-shadow: 0 0 5px 0 var(--focus-color);
     }
 
-    &.input-large {
-      font-size: 1.25rem;
-    }
-
-    &.input-small {
-      font-size: 0.75rem;
-    }
-
     &:disabled {
       background-color: #eaeaea;
+      cursor: not-allowed;
     }
   }
 }
 
 @layer theme {
   .input-success {
-    --border-color: #27ae60;
+    --default-border-color: #27ae60;
     --focus-color: #0f0;
   }
 
   .input-error {
-    --border-color: #eb5757;
+    --default-border-color: #eb5757;
     --focus-color: #f00;
+  }
+
+  .input-large {
+    font-size: 1.25rem;
+  }
+
+  .input-small {
+    font-size: 0.75rem;
   }
 }

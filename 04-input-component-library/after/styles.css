@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-input {
-  margin: 0.25rem;
-}
-
 .input {
   border: 1px solid #aaa;
   outline: none;
@@ -47,4 +43,5 @@ input {
 
 .input:disabled {
   background-color: #eaeaea;
+  cursor: not-allowed;
 }
