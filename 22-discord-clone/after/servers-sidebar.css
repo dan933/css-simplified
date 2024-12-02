@@ -20,18 +20,11 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius);
     width: 3rem;
     height: 3rem;
     background-color: var(--bg-color);
     color: var(--foreground-color);
     text-transform: uppercase;
-    transition-duration: 0.15s;
-    transition-property: border-radius;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
 
     &::before {
       content: "";
@@ -40,9 +33,9 @@
       background-color: var(--foreground-color-light);
       width: 0.25rem;
       height: 1.5rem;
+      scale: 0;
       border-top-right-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem;
-      scale: 0;
       transition-property: height, scale;
       transition-duration: 0.15s;
       transform-origin: left center;
@@ -52,9 +45,9 @@
       }
     }
 
+    &.active,
     &:hover,
-    &:focus-within,
-    &.active {
+    &:focus-within {
       background-color: var(--accent-color);
       color: var(--accent-color-foreground);
       --border-radius: 1rem;
@@ -64,15 +57,9 @@
       }
     }
 
-    &.with-new-messages:not(.active) {
-      &::before {
-        height: 0.5rem;
-        scale: 1;
-      }
-
-      &:hover::before {
-        height: 1.5rem;
-      }
+    &.with-new-messages:not(.active):not(:hover)::before {
+      height: 0.5rem;
+      scale: 1;
     }
 
     &.active::before {
@@ -82,16 +69,26 @@
     &[data-notifications-count]::after {
       content: attr(data-notifications-count);
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -0.125rem;
+      bottom: -0.125rem;
       background-color: var(--danger-color);
       color: var(--danger-foreground-color);
       font-size: 0.75rem;
       font-weight: bold;
-      padding: 0 0.375rem;
+      padding-inline: 0.375rem;
       border: 0.25rem solid var(--bg-color-darker);
       border-radius: 1rem;
-      translate: 0.125rem 0.125rem;
+    }
+  }
+
+  .server,
+  .server img {
+    transition-property: border-radius;
+    transition-duration: 0.15s;
+    border-radius: var(--border-radius);
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
   }
 
@@ -100,12 +97,5 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: var(--border-radius);
-    transition-property: border-radius;
-    transition-duration: 0.15s;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
   }
 }

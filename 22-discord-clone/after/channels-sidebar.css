@@ -1,4 +1,12 @@
 @layer layouts {
+  .channels-sidebar-header {
+    grid-area: channels-header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+
   .channels-sidebar {
     grid-area: channels;
     background-color: var(--bg-color-dark);
@@ -11,6 +19,21 @@
 }
 
 @layer components {
+  .channels-sidebar-header {
+    background-color: var(--bg-color-dark);
+    color: var(--foreground-color);
+    border-bottom: 1px solid var(--bg-color-darker);
+
+    &:hover {
+      background-color: var(--bg-color-light);
+    }
+
+    .chevron {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
   .channel {
     color: var(--foreground-color-dark);
     padding: 0.25rem 0.5rem;
@@ -20,10 +43,8 @@
     gap: 0.5rem;
 
     .hash {
-      color: var(--foreground-color-dark);
       width: 1.25em;
       height: 1.25em;
-      line-height: 0;
     }
 
     &.muted {
@@ -35,7 +56,7 @@
     }
 
     &:hover,
-    &:focus-within {
+    &:focus-visible {
       background-color: var(--bg-color-light);
       color: var(--foreground-color);
     }
@@ -70,37 +91,17 @@
     display: flex;
     align-items: center;
     gap: 0.1rem;
-    margin-left: -0.25em;
+    margin-inline-start: -0.25em;
     border-radius: 0.25rem;
 
     &:hover,
-    &:focus-within {
+    &:focus-visible {
       color: var(--foreground-color);
     }
 
     .chevron {
       width: 1em;
       height: 1em;
-    }
-  }
-
-  .channels-sidebar-header {
-    grid-area: channels-header;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 1rem;
-    background-color: var(--bg-color-dark);
-    color: var(--foreground-color);
-    border-bottom: 1px solid var(--bg-color-darker);
-
-    &:hover {
-      background-color: var(--bg-color-light);
-    }
-
-    .chevron {
-      width: 1.5em;
-      height: 1.5em;
     }
   }
 }

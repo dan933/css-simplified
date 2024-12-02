@@ -3,144 +3,148 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Clone</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-    <title>Discord Clone</title>
   </head>
   <body>
     <div class="app-container">
       <div class="servers-sidebar scrollbar-hidden">
-        <a data-active-toggle="server" href="#" class="server active">
+        <a href="#" class="server active" data-active-toggle="server">
           <img src="./imgs/servers/hiking-lovers.jpg" alt="Hiking Lovers" />
         </a>
         <a
           href="#"
-          data-active-toggle="server"
           class="server with-new-messages"
           data-notifications-count="11"
+          data-active-toggle="server"
         >
           TCN
         </a>
         <a
-          data-active-toggle="server"
           href="#"
           class="server with-new-messages"
           data-notifications-count="2"
+          data-active-toggle="server"
         >
           <img src="./imgs/servers/gym-rats.jpg" alt="Gym Rats" />
         </a>
-        <a href="#" data-active-toggle="server" class="server with-new-messages"
-          >TSAD</a
+        <a
+          href="#"
+          class="server with-new-messages"
+          data-active-toggle="server"
         >
-        <a href="#" data-active-toggle="server" class="server">TNS</a>
+          TSAD
+        </a>
+        <a href="#" class="server" data-active-toggle="server">TNS</a>
       </div>
       <button class="channels-sidebar-header outline-inset">
         Hiking Lovers
-        <svg class="chevron"><use href="#svg-chevron"></use></svg>
+        <svg class="chevron"><use href="#svg-chevron" /></svg>
       </button>
       <div class="channels-sidebar scrollbar-vanishing">
         <div class="channel-group">
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             general
           </a>
           <a href="#" data-active-toggle="channel" class="channel muted">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             introductions
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             new-members
           </a>
         </div>
         <div data-channel-group class="channel-group">
           <button data-channel-group-toggle class="channel-group-title">
-            <svg class="chevron"><use href="#svg-chevron"></use></svg>
+            <svg class="chevron"><use href="#svg-chevron" /></svg>
             Hiking Trips
           </button>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             north-america
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             europe
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             africa
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             asia
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             south-america
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             australia
           </a>
         </div>
         <div data-channel-group class="channel-group collapsed">
           <button data-channel-group-toggle class="channel-group-title">
-            <svg class="chevron"><use href="#svg-chevron"></use></svg>
-            other
+            <svg class="chevron"><use href="#svg-chevron" /></svg>
+            Other
           </button>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             hiking-advice
           </a>
           <a href="#" data-active-toggle="channel" class="channel">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             hiking-gear
           </a>
           <a href="#" data-active-toggle="channel" class="channel active">
-            <svg class="hash"><use href="#svg-hash"></use></svg>
+            <svg class="hash"><use href="#svg-hash" /></svg>
             trail-ratings
           </a>
         </div>
       </div>
       <header class="chat-header">
         <div class="channel-name">
-          <svg class="hash"><use href="#svg-hash"></use></svg>
+          <svg class="hash"><use href="#svg-hash" /></svg>
           trail-ratings
         </div>
         <div class="icons">
-          <button data-active-toggle="chat-header-icon" class="icon">
-            <svg><use href="#svg-thread"></use></svg>
+          <button class="icon" data-active-toggle="chat-header-icon">
+            <svg><use href="#svg-thread" /></svg>
           </button>
-          <button data-active-toggle="chat-header-icon" class="icon">
-            <svg><use href="#svg-notification-bell"></use></svg>
+          <button class="icon" data-active-toggle="chat-header-icon">
+            <svg><use href="#svg-notification-bell" /></svg>
           </button>
-          <button data-active-toggle="chat-header-icon" class="icon">
-            <svg><use href="#svg-pin"></use></svg>
+          <button class="icon" data-active-toggle="chat-header-icon">
+            <svg><use href="#svg-pin" /></svg>
           </button>
           <button
-            data-active-toggle="chat-header-icon"
-            data-users-sidebar-toggle
             class="icon"
+            data-users-sidebar-toggle
+            data-active-toggle="chat-header-icon"
           >
-            <svg><use href="#svg-users"></use></svg>
+            <svg><use href="#svg-users" /></svg>
           </button>
           <div class="search-input-wrapper">
             <input type="search" placeholder="Search" class="search-input" />
             <button class="x-icon">
-              <svg><use href="#svg-x"></use></svg>
+              <svg><use href="#svg-x" /></svg>
             </button>
-            <svg class="search-icon"><use href="#svg-search"></use></svg>
+            <svg class="search-icon"><use href="#svg-search" /></svg>
           </div>
-          <button data-active-toggle="chat-header-icon" class="icon">
-            <svg><use href="#svg-inbox"></use></svg>
+          <button class="icon" data-active-toggle="chat-header-icon">
+            <svg><use href="#svg-inbox" /></svg>
           </button>
-          <button data-active-toggle="chat-header-icon" class="icon">
-            <svg><use href="#svg-help"></use></svg>
+          <button class="icon" data-active-toggle="chat-header-icon">
+            <svg><use href="#svg-help" /></svg>
           </button>
         </div>
       </header>
-      <div class="chat-window scrollbar-minimal">
-        <div class="chat-messages">
+      <div class="chat-window">
+        <div class="chat-messages scrollbar-minimal">
           <div class="flex-spacer"></div>
           <div class="message-group">
             <div class="message-row">
@@ -149,29 +153,30 @@
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-emoji"></use></svg>
+                  <svg><use href="#svg-emoji" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-edit"></use></svg>
+                  <svg><use href="#svg-edit" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-forward"></use></svg>
+                  <svg><use href="#svg-forward" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-more"></use></svg>
+                  <svg><use href="#svg-more" /></svg>
                 </button>
               </div>
               <img
                 src="./imgs/avatars/camilla-hobart.jpg"
+                alt="Camilla Hobart"
                 class="message-avatar"
               />
               <div>
@@ -188,25 +193,25 @@
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-emoji"></use></svg>
+                  <svg><use href="#svg-emoji" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-edit"></use></svg>
+                  <svg><use href="#svg-edit" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-forward"></use></svg>
+                  <svg><use href="#svg-forward" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-more"></use></svg>
+                  <svg><use href="#svg-more" /></svg>
                 </button>
               </div>
               <div class="message-date">12:59 PM</div>
@@ -218,25 +223,25 @@
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-emoji"></use></svg>
+                  <svg><use href="#svg-emoji" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-edit"></use></svg>
+                  <svg><use href="#svg-edit" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-forward"></use></svg>
+                  <svg><use href="#svg-forward" /></svg>
                 </button>
                 <button
                   class="action-icon"
                   data-active-toggle="message-popover-action"
                 >
-                  <svg><use href="#svg-more"></use></svg>
+                  <svg><use href="#svg-more" /></svg>
                 </button>
               </div>
               <div class="message-date">1:00 PM</div>
@@ -400,38 +405,38 @@
         <div class="message-input-wrapper">
           <textarea
             class="message-input"
-            placeholder="Message #general"
+            placeholder="Message #trail-ratings"
           ></textarea>
           <button
             class="message-input-icon"
             data-active-toggle="message-input-icon"
           >
-            <svg><use href="#svg-plus"></use></svg>
+            <svg><use href="#svg-plus" /></svg>
           </button>
           <div class="message-input-actions">
             <button
               class="message-input-icon"
               data-active-toggle="message-input-icon"
             >
-              <svg><use href="#svg-present"></use></svg>
+              <svg><use href="#svg-present" /></svg>
             </button>
             <button
               class="message-input-icon"
               data-active-toggle="message-input-icon"
             >
-              <svg><use href="#svg-gif"></use></svg>
+              <svg><use href="#svg-gif" /></svg>
             </button>
             <button
               class="message-input-icon"
               data-active-toggle="message-input-icon"
             >
-              <svg><use href="#svg-sticker"></use></svg>
+              <svg><use href="#svg-sticker" /></svg>
             </button>
             <button
               class="message-input-icon"
               data-active-toggle="message-input-icon"
             >
-              <svg><use href="#svg-emoji"></use></svg>
+              <svg><use href="#svg-emoji" /></svg>
             </button>
           </div>
         </div>
@@ -446,9 +451,9 @@
           >
             <div class="user-img-wrapper">
               <img
-                class="user-img"
                 src="./imgs/avatars/camilla-hobart.jpg"
                 alt="Camilla Hobart"
+                class="user-img"
               />
             </div>
             <div>Camilla Hobart</div>
@@ -460,9 +465,9 @@
           >
             <div class="user-img-wrapper">
               <img
-                class="user-img"
                 src="./imgs/avatars/daniel-sutten.jpg"
-                alt="Daniel Sutten"
+                alt="aniel Sutten"
+                class="user-img"
               />
             </div>
             <div>Daniel Sutten</div>
@@ -474,9 +479,9 @@
           >
             <div class="user-img-wrapper">
               <img
-                class="user-img"
                 src="./imgs/avatars/loria-gisch.jpg"
                 alt="Loria Gisch"
+                class="user-img"
               />
             </div>
             <div>Loria Gisch</div>
@@ -488,9 +493,9 @@
           >
             <div class="user-img-wrapper">
               <img
-                class="user-img"
                 src="./imgs/avatars/miles-micco.jpg"
                 alt="Miles Micco"
+                class="user-img"
               />
             </div>
             <div>Miles Micco</div>
@@ -502,22 +507,26 @@
             class="user-list-row offline"
             data-active-toggle="user-list-item"
           >
-            <img
-              class="user-img"
-              src="./imgs/avatars/martin-imbesi.jpg"
-              alt="Martin Imbesi"
-            />
+            <div class="user-img-wrapper">
+              <img
+                src="./imgs/avatars/martin-imbesi.jpg"
+                alt="Martin Imbesi"
+                class="user-img"
+              />
+            </div>
             <div>Martin Imbesi</div>
           </button>
           <button
             class="user-list-row offline"
             data-active-toggle="user-list-item"
           >
-            <img
-              class="user-img"
-              src="./imgs/avatars/roselyn-beile.jpg"
-              alt="Roselyn Beile"
-            />
+            <div class="user-img-wrapper">
+              <img
+                src="./imgs/avatars/roselyn-beile.jpg"
+                alt="Roselyn Beile"
+                class="user-img"
+              />
+            </div>
             <div>Roselyn Beile</div>
           </button>
         </div>
