@@ -285,9 +285,10 @@
       );
       color: var(--foreground-color);
       line-height: var(--line-height);
-      height: var(--base-height);
+      min-height: var(--base-height);
       flex-grow: 1;
       scrollbar-width: none;
+      field-sizing: content;
     }
   }
 }
