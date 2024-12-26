@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+.btn{
+    background: hsl(0, 0%, 90%);
+    border: 1px solid hsl(0, 0%, 70%);
+    outline: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+.btn:hover, .btn:focus-visible{
+    background: hsl(0, 0%, 90%);
+    box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+}
+
+.btn.btn-Primary{
+    color: hsl(0, 0%, 100%);
+    background: hsl(271, 70%, 50%);
+    border-color: hsl(271, 70%, 30%);
+}
+.btn.btn-Primary:hover, .btn.btn-Primary:focus-visible{
+    color: hsl(0, 0%, 100%);
+    background: hsl(271, 70%, 40%);
+    box-shadow: 0 0 5px 0 hsl(271, 70%, 40%);
+
+}
+.btn.btn-Accent{
+    color: hsl(0, 0%, 100%);
+    background: hsl(200, 100%, 40%);
+    border-color: hsl(271, 70%, 30%);
+}
+.btn.btn-Accent:hover, .btn.btn-Accent:focus-visible{
+    color: hsl(0, 0%, 100%);
+    background: hsl(200, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(200, 100%, 20%);
+}
+.btn.btn-Danger{
+    color: hsl(0, 0%, 100%);
+    background: hsl(19, 100%, 40%);
+    border-color: hsl(0, 70%, 30%);
+}
+.btn.btn-Danger:focus, .btn-Danger:hover{
+    color: hsl(0, 0%, 100%);
+    background: hsl(19, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(0, 100%, 20%);
+}
+.btn.btn-Large{
+ font-size: 1.25rem;
+}
+
+.btn.btn-Small{
+ font-size: 0.75rem;
+}
+.btn.btn-Pill{
+    border-radius: 999999px;
+}
