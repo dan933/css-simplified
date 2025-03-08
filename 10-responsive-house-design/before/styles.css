@@ -16,6 +16,20 @@ body {
   align-items: center;
   background-color: white;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+  container-name: main-header;
+  container-type: inline-size;
+}
+
+@media screen and (max-width: 358px) {
+  .main-header{
+    flex-direction: column;
+  }
+
+  .header-nav{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 }
 
 .brand-name {
@@ -119,6 +133,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
 }
 
 .card-footer {
