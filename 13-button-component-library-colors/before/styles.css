@@ -10,9 +10,10 @@
     --saturation: 0%;
     --lightness: 90%;
 
-    background: hsl(var(--hue), var(--saturation), var(--lightness));
-    border: 1px solid
-      hsl(var(--hue), var(--saturation), calc(var(--lightness) - 20%));
+    --bg-color: oklch(92% 0 0);
+
+    background: var(--bg-color);
+    border: 1px solid oklch(from var(--bg-color) calc(l - 0.15) c h);
     outline: none;
     cursor: pointer;
     padding: 0.5em 1em;
@@ -20,39 +21,25 @@
 
     &:hover,
     &:focus-visible {
-      background-color: hsl(
-        var(--hue),
-        var(--saturation),
-        calc(var(--lightness) - 10%)
-      );
-      box-shadow: 0 0 5px 0
-        hsl(var(--hue), var(--saturation), calc(var(--lightness) - 20%));
+      background-color: oklch(from var(--bg-color) calc(l - 0.075) c h);
+      box-shadow: 0 0 5px 0 oklch(from var(--bg-color) calc(l - 0.15) c h);
     }
   }
 }
 
 @layer theme {
   .btn-primary {
-    --hue: 271;
-    --saturation: 70%;
-    --lightness: 50%;
-
+    --bg-color: oklch(56% 0.244 301);
     color: white;
   }
 
   .btn-accent {
-    --hue: 200;
-    --saturation: 100%;
-    --lightness: 40%;
-
+    --bg-color: oklch(56% 0.141 242);
     color: white;
   }
 
   .btn-danger {
-    --hue: 0;
-    --saturation: 60%;
-    --lightness: 50%;
-
+    --bg-color: oklch(56% 0.19 26);
     color: white;
   }
 
@@ -66,5 +53,22 @@
 
   .btn-pill {
     border-radius: 999999px;
+  }
+
+  .btn-custom{
+    --gradient-1: oklch(56% 0.244 301);
+    --gradient-2: oklch(56% 0.141 242);
+    background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(
+        to right,
+        oklch(from var(--gradient-1) calc(l - 0.075) c h),
+        oklch(from var(--gradient-2) calc(l - 0.075) c h)
+      );
+    }
   }
 }
